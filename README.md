@@ -1,11 +1,11 @@
 # Search Images By Tagging Them
-Tagging photos provides much better search capabilities, in this project I'm trying to build an inteligient way to search for images using image recongnition (google-vision).
+Tagging photos provides much better search capabilities, in this project I'm trying to build an intelligent way to search for images using image recognition (google-vision).
 
-This project can be used as a backend for backup solution, users only have to upload thier images and its automatically gets tagged by google-vision services.
+This project can be used as a back-end for backup solution, users only have to upload their images and its automatically gets tagged by google-vision services.
 
-Also, it provides a translation capability, for example if translation for arabic is enabled. Once the image got tags (lables) from google-vision service, all these tags will be translated using google-translation-api. So the user who is searching for 'مركبة' ( veichele in arabic) or the other who is looking for viechele will get the same result. 
+Also, it provides a translation capability, for example if translation for Arabic is enabled. Once the image got tags (labels) from google-vision service, all these tags will be translated using google-translation-api. So the user who is searching for 'مركبة' ( vehicle in Arabic) or the other who is looking for vehicle will get the same result. 
 
-All these processes are done async, as showin in HOW IT WORKs section, once the recognition and the translation process are done, a document for this image will be stored in ElasticSearch like the following : 
+All these processes are done is async queue, as shown in How it works section, once the recognition and the translation process are done, a document for this image will be stored in ElasticSearch in the following structure : 
 
 ```
 {
