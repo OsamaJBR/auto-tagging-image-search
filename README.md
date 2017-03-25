@@ -61,4 +61,6 @@ $ curl -XPOST -F name=laptop.png -F data=@laptop.png http://127.0.0.1:5555/uploa
 
 
 ## TO DO
-* For now it only support 
+* Add search for images to the bottle application
+* Support different storage locations such (S3, Goolge Cloud Storage)
+* Imporve search for arabic words (partial search) 
