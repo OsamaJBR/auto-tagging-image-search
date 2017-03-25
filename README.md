@@ -54,4 +54,11 @@ $ python main.py
 ```
 $ python consumer.py
 ```
+4) Upload an image using CURL
+```
+$ curl -XPOST -F name=laptop.png -F data=@laptop.png http://127.0.0.1:5555/upload
+```
 
+
+## TO DO
+* For now it only support 
