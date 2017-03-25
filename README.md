@@ -40,18 +40,17 @@ All these processes are done async, as showin in HOW IT WORKs section, once the 
 	]
 }
 ```
-# HOW IT WORKS
+## HOW IT WORKS
 
 ![Alt text](/examples/tagging-images.png?raw=true "Optional Title")
 
-# HOW TO RUN IT
-### Edit the config.ini file
-### Run the HTTP interface
+## HOW TO RUN IT
+1) Edit the config.ini file
+2) Run the HTTP interface
 ```
 $ python main.py
 ```
-
-### Run the Consumer Process
+3) Run the Consumer Process
 ```
 $ python consumer.py
 ```
