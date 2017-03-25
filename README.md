@@ -40,11 +40,11 @@ All these processes are done async, as showin in HOW IT WORKs section, once the 
 	]
 }
 ```
-## HOW IT WORKS
+## How it works
 
 ![Alt text](/examples/tagging-images.png?raw=true "Optional Title")
 
-## HOW TO RUN IT
+## How to run 
 1) Edit the config.ini file
 2) Run the HTTP interface
 ```
