@@ -61,6 +61,16 @@ def search():
     operator = request.query.get('op','OR')
     return search_engine.search_for_words(op=operator,words=words)
 
+@route('/image')
+def get_images():
+    image_path = request.query.get('path',None)
+    if os.path.exists(image_path):
+        data = open(image_path,'rb').read()
+        response.set_header('Content-type', 'image/jpeg')
+        return data
+    else:
+        HTTPResponse(status=404,body=json.dumps({'error' : 'image not found'}))
+
 #------------------
 # MAIN
 #------------------
