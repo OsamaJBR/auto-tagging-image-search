@@ -26,6 +26,10 @@ app = application = Bottle()
 # Consumer Queue
 queue = Queue(config)
 
+# Search Engine
+from searchengine import SEngine
+search_engine = SEngine(config)
+
 # routes 
 @route('/upload',method='POST')
 def upload_image():
@@ -51,7 +55,11 @@ def upload_image():
     else:
         return HTTPResponse(status=400,body=json.dumps({'error' : 'missing fields'}))
 
-    
+@route('/search')
+def search():
+    words = request.query.get('words')
+    operator = request.query.get('op','OR')
+    return search_engine.search_for_words(op=operator,words=words)
 
 #------------------
 # MAIN
